@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app); 
 const io = new Server(server, {
   cors: {
-    origin: process.env.URL_FRONT_ORIGIN,
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
   },
@@ -25,7 +25,7 @@ const io = new Server(server, {
 const port = process.env.PORT;
 
 const corsOptions = {
-  origin: process.env.URL_FRONT_ORIGIN,
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
 };
